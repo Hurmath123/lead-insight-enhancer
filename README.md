@@ -166,7 +166,7 @@ This project:
 
 ## 📬 Questions or Feedback?
 
-Open an issue or ping me at `froughhurmath04@gmail.com.com`.
+Open an issue or ping me at `froughhurmath04@gmail.com`.
 
 ---
 
