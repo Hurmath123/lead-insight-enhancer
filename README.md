@@ -76,7 +76,7 @@ export OPENAI_API_KEY=your_key_here
 4. **Run on your input CSV**
 
 ```bash
-python enhancer.py
+python lead_enhancer.py
 ```
 
 Output will be saved as `enhanced_leads.csv`.
@@ -133,7 +133,7 @@ If you don’t have a SaaSquatch export, just use the included `saasquatch_expor
 
 ```
 lead-insight-enhancer/
-├── enhancer.py               # Core logic
+├── lead_enhancer.py               # Core logic
 ├── app.py                    # Streamlit UI
 ├── saasquatch_export.csv     # Example input
 ├── enhanced_leads.csv        # Output (created at runtime)
