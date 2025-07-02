@@ -7,7 +7,7 @@ import openai
 import os
 
 # --- Load OpenAI Key ---
-openai.api_key = os.getenv("OPENAI_API_KEY")  # Make sure this is set in environment
+openai.api_key = st.secrets["OPENAI_API_KEY"]  # Make sure this is set in environment
 
 # --- Helper Functions ---
 
@@ -41,8 +41,7 @@ def get_domain_age(domain):
 
 def get_company_news_summary(company):
     try:
-        print(f"Fetching news for {company}")
-        prompt = f"Give a recent 1-line update or milestone about {company}."
+        prompt = f"Give a brief 1-line update about recent news or milestones for {company}."
         response = openai.ChatCompletion.create(
             model="gpt-4",
             messages=[
@@ -53,7 +52,7 @@ def get_company_news_summary(company):
         )
         return response["choices"][0]["message"]["content"].strip()
     except Exception as e:
-        print(f"OpenAI failed for {company}: {e}")
+        print(f"Error fetching news for {company}: {e}")
         return "No news found"
 
 # --- Main Enhancer ---
