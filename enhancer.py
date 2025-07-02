@@ -4,6 +4,7 @@ import whois
 from urllib.parse import urlparse
 from datetime import datetime
 import openai
+import streamlit as st
 import os
 
 # --- Load OpenAI Key ---
