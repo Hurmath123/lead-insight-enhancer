@@ -9,7 +9,12 @@ import os
 
 # --- Load OpenAI Key ---
 openai.api_key = st.secrets["OPENAI_API_KEY"]  # Make sure this is set in environment
+response = openai.ChatCompletion.create(
+    model="gpt-4",
+    messages=[{"role": "user", "content": "Give a 1-line update about OpenAI"}]
+)
 
+print(response["choices"][0]["message"]["content"])
 # --- Helper Functions ---
 
 def generate_email(company_name, domain):
