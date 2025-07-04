@@ -1,20 +1,20 @@
 
 # 🧠 Lead Insight Enhancer
 
-The **Lead Insight Enhancer** is a Python-based tool that transforms raw lead exports (e.g., from SaaSquatch) into rich, prioritized prospect data. It augments each entry with intelligent signals like website activity, domain age, AI-generated news, and an email guess — helping sales and BD teams focus on the leads that matter most.
+The **Lead Insight Enhancer** is a Python-based tool that enriches raw lead exports (like those from SaaSquatch) into smart, scored prospects using domain intelligence, AI-powered summaries, and email generation. This version runs entirely offline using the open-source **llama3 model with Ollama** — perfect for privacy, cost efficiency, and control.
 
 ---
 
 ## 🚀 Why This Project?
 
-Modern sales pipelines are noisy. SaaSquatch and other lead-gen tools provide long lists of potential companies, but lack context:
+Sales and BD teams often get raw CSVs of company names — but no real signal. This tool fills in that context:
 
 - Is the company still active?
 - How old is its web presence?
 - Can we guess a real-looking email?
 - Is there any recent traction or news?
 
-This app addresses those blind spots in a minimal, automated way — ideal for internal lead research, early-stage startups, or SDR teams looking to boost productivity.
+With no external API calls, it gives quick insights right from your machine — helpful for prospecting, validation, or internal dashboards.
 
 ---
 
@@ -54,17 +54,22 @@ cd lead-insight-enhancer
 pip install -r requirements.txt
 ```
 
-3. **Run on your input CSV**
+3. **Install Ollama and model**
+Install Ollama and pull the llama3 model:
 
 ```bash
-python enhancer.py
+ollama pull llama3
 ```
 
-Output will be saved as `enhanced_leads.csv`.
+Ensure Ollama is running:
+
+```bash
+ollama serve
+```
 
 ---
 
-## 🖥️ Optional: Streamlit UI
+## 🖥️ Streamlit UI
 
 To use the tool with a simple web interface:
 
@@ -88,19 +93,12 @@ Each lead is assigned a numeric score based on:
 
 ---
 
-## 🔐 API Key Required
-
-This project uses OpenAI’s GPT-4 API to summarize company updates. You’ll need an API key from [https://platform.openai.com](https://platform.openai.com).
-
----
-
 ## 🤖 Tech Stack
 
 - **Python** (core logic)
 - **Pandas** for CSV processing
 - **Requests + WHOIS** for web intelligence
-- **OpenAI API** for text generation
-- **Streamlit** for optional UI
+- **Streamlit** for UI
 
 ---
 
@@ -130,7 +128,7 @@ lead-insight-enhancer/
 This project:
 - Targets a **clear pain point** in lead prioritization
 - Shows **real-world judgment** (email patterns, domain scoring)
-- Uses **multiple signals**, including GPT-4, to surface value
+- Uses **multiple signals**, including llama-3, to surface value
 - Has a **clean UI option** (Streamlit) and CLI for versatility
 - Shows **product thinking** and packaging
 
@@ -138,10 +136,10 @@ This project:
 
 ## 🧠 Future Enhancements (Ideas)
 
-- Use LinkedIn + Apollo APIs to pull real email addresses
-- Add export to Google Sheets
-- Include social signals like Twitter/X activity
-- Add filters: score > 80, domain live, etc.
+- LinkedIn data enrichment
+- Social media activity scraping
+- Built-in filters (score > 100, news present, etc.)
+- Export to Google Sheets or Notion
 
 ---
 
