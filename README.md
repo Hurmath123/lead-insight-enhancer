@@ -25,22 +25,9 @@ This app addresses those blind spots in a minimal, automated way — ideal for i
 | ✅ **Domain Status Check** | Verifies if the company website is online and reachable |
 | 🕰️ **Domain Age (WHOIS)** | Estimates how long the company domain has existed |
 | ✉️ **Email Pattern Guess** | Generates likely email based on company name and domain |
-| 🧠 **AI News Summary** | Uses GPT-4 to pull a 1-line summary of the company's latest updates |
+| 🧠 **AI News Summary** | Uses llama-3 to pull a 1-line summary of the company's latest updates |
 | 🎯 **Lead Scoring** | Assigns a score based on activity, longevity, and name clarity |
 | 📦 **CSV Output** | Saves enriched data as a downloadable CSV |
-
----
-
-## 📁 Example Input CSV
-
-```csv
-Company,Website
-OpenAI,https://www.openai.com
-Caprae Capital,https://www.capraecapital.com
-Notion,https://www.notion.so
-Stripe,https://www.stripe.com
-Zapier,https://www.zapier.com
-```
 
 ---
 
@@ -67,16 +54,10 @@ cd lead-insight-enhancer
 pip install -r requirements.txt
 ```
 
-3. **Set your OpenAI API key**
+3. **Run on your input CSV**
 
 ```bash
-export OPENAI_API_KEY=your_key_here
-```
-
-4. **Run on your input CSV**
-
-```bash
-python lead_enhancer.py
+python enhancer.py
 ```
 
 Output will be saved as `enhanced_leads.csv`.
@@ -133,7 +114,7 @@ If you don’t have a SaaSquatch export, just use the included `saasquatch_expor
 
 ```
 lead-insight-enhancer/
-├── lead_enhancer.py               # Core logic
+├── enhancer.py               # Core logic
 ├── app.py                    # Streamlit UI
 ├── saasquatch_export.csv     # Example input
 ├── enhanced_leads.csv        # Output (created at runtime)
