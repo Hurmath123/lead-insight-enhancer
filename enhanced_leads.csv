@@ -1,0 +1,10 @@
+Company,Website,domain,email_guess,domain_alive,domain_age_days,company_news,score
+OpenAI,https://www.openai.com,www.openai.com,openai@www.openai.com,False,6738.0,"According to my sources, OpenAI recently announced the release of DALL-E 2, an AI model that can generate highly realistic and detailed images from text prompts, with impressive results in various creative and practical applications.",84.0
+Caprae Capital,https://www.capraecapital.com,www.capraecapital.com,caprae.capital@www.capraecapital.com,True,344.0,"I apologize, but I couldn't find any recent updates or news about Caprae Capital as it seems to be a private company and doesn't have a significant online presence. Therefore, my answer is: ""No news found"".",110.0
+Notion,https://www.notion.so,www.notion.so,notion@www.notion.so,True,,"Here's the latest update:
+
+Notion has announced the launch of its new ""Templates"" feature, which allows users to create custom templates for various use cases such as project management, note-taking, and more.
+
+(Note: This information may not be up-to-date or accurate. I'm just an AI, after all!)",
+Stripe,https://www.stripe.com,www.stripe.com,stripe@www.stripe.com,True,10886.0,"According to their blog and latest announcements, Stripe has recently introduced ""Stripe Connect for Marketplaces"", a new feature that enables marketplaces to manage transactions and payouts more efficiently (Source: Stripe Blog, January 2023).",134.0
+Zapier,https://www.zapier.com,www.zapier.com,zapier@www.zapier.com,True,4993.0,"No news found. Zapier is an automation tool that integrates web applications, and as such, it doesn't typically release newsworthy updates on a regular basis. However, you can check their blog for recent articles on how to use their platform or new features they've added!",134.0
